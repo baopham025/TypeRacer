@@ -1,0 +1,61 @@
+.snackbar {
+  position: fixed;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 60px;
+  padding-top: 3.5px;
+  border-radius: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 3px;
+  vertical-align: middle;
+  color: white;
+  font-family: "Inconsolata", monospace;
+  font-size: 25px;
+  background-color: rgb(22, 22, 23);
+  opacity: 0%;
+  transition: opacity 0.3s linear;
+}
+
+.snackbar span:nth-child(4) {
+  color: #1eba89; 
+}
+
+.snackbar span:nth-child(5) {
+  color: #9adff1; 
+}
+
+.snackbar span:nth-child(6) {
+  color: #d64933; 
+}
+
+#hidden {
+  visibility: hidden;
+}
+
+#show {
+  animation: slideIn 7s;
+}
+
+@keyframes slideIn {
+  0% {
+    bottom: -10px;
+    opacity: 0%;
+  }
+
+  30% {
+    bottom: 10px;
+    opacity: 60%;
+  }
+
+  80% {
+    opacity: 60%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
